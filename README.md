@@ -1,5 +1,5 @@
 
-# 📚 BibliSmart – Gestion intelligente de bibliothèque numérique
+# 📚 LibraNet – Gestion intelligente de bibliothèque numérique
 
 Bienvenue dans le projet **BibliSmart**, une plateforme web de gestion de bibliothèque optimisée par l'intelligence artificielle (IA). Ce dépôt contient tout le code, la documentation et les éléments liés au développement et à la gestion du projet.
 
