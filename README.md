@@ -7,7 +7,7 @@ Bienvenue dans le projet **BibliSmart**, une plateforme web de gestion de biblio
 - **Younes Kamouly** – Coordonnateur / Dev Frontend
 - **Alsabbagh Louai** – Développeur Backend / Paiements
 - **Imran Ben Abbass** – Assurance Qualité (AQ)
-- **Abdelatif** – Gestion de configuration / Git
+- **Boulouqat Abdellatif** – Gestion de configuration / Git
 - **Youssef** – IA & Chatbot
 
 ## 🗂️ Structure du projet
