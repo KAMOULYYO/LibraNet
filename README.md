@@ -1,3 +1,4 @@
+git checkout -b docs
 
 # 📚 LibraNet – Gestion intelligente de bibliothèque numérique
 
