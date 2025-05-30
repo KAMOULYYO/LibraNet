@@ -1,84 +1,79 @@
-# 📊 Rapport de Suivi – Sprint 2
+# Rapport de Suivi – Sprint 2
 
-## 🏷️ Nom de l'équipe : Biblio_Teccart  
-## 🔢 Numéro d’itération : Sprint 2
-
----
-
-### 🎯 But de l’itération
-Permettre à l’utilisateur de consulter les documents, retourner les emprunts et payer les amendes.
+**Équipe :** Biblio_Teccart  
+**Itération :** Sprint 2  
+**But de l’itération :** L’utilisateur peut consulter un document, retourner un prêt, et payer une amende.  
 
 ---
 
-### 🎯 Estimation en Points Utilisateur (UP)
-Total estimé : 22 UP
+### 🔢 Estimation en UP
+**Total prévu :** 20 points utilisateurs
 
 ---
 
-### 📌 Diagrammes UML
-- Diagramme de classes : `docs/uml/uml_class Diagramme.png`
-- Diagramme de cas d’utilisation : `docs/uml/uml_use_case.png`
+### 📊 Diagrammes UML
+- Diagramme de cas d’utilisation : `docs/uml/use_case_diagram.png`
+- Diagramme de classes : `docs/uml/class_diagram.png`
 
 ---
 
-### ✅ TDD / Tests unitaires
+### 🧪 TDD / Tests unitaires
 Prévu au Sprint 3.
 
 ---
 
-### 📋 Engagement de l’équipe
+### 🧩 Engagement
 
-| Fonctionnalité              | Taille Engagée | Taille Réalisée | Statut        |
-|----------------------------|----------------|------------------|---------------|
-| Consultation document      | 6 UP           | 6 UP             | Terminé       |
-| Retour de document         | 6 UP           | 4 UP             | En cours      |
-| Paiement amende            | 6 UP           | 6 UP             | Terminé       |
-| Génération de rapport      | 4 UP           | 0 UP             | Pas commencé  |
-| **Total**                  | **22 UP**      | **16 UP**        |               |
+| Fonctionnalité                | Taille engagée | Taille réalisée | Statut       |
+|------------------------------|----------------|------------------|--------------|
+| Consultation document        | 7              | 7                | Terminé      |
+| Retour d’un prêt             | 6              | 6                | Terminé      |
+| Paiement d’une amende        | 7              | 6                | En cours     |
+| **Total**                    | **20**         | **19**           |              |
 
 ---
 
 ### ⭐ Faits saillants
-- Bonne intégration du paiement.
-- Retard sur la fonctionnalité de retour à cause d’un conflit API.
-- Génération rapport repoussée à Sprint 3.
+- L’API de paiement a été partiellement intégrée.
+- Tests fonctionnels validés pour consultation et retour.
 
 ---
 
-### 📈 Sunset Graph
-(À insérer dans `/docs/suivi/sunset_sprint2.png`)
+### 🌇 Sunset Graph
+
+![Sunset Graph](../suivi/sunset_graph_sprint2.png)
+
+**Commentaires :**  
+Selon notre vélocité, le projet sera terminé dans les temps.  
+Petite baisse de productivité cette semaine à cause d’un souci d’accès à l’API externe.
 
 ---
 
-### 🕒 État de l’effort et des coûts
+### 📉 Coûts & Efforts
 
-| État                   | Effort (hres) | Coûts ($) |
-|------------------------|---------------|-----------|
-| Au début de l’itération | 30,00         | 3300,00   |
-| Cette itération         | 12,00         | 1320,00   |
-| Cumulatif à date        | 42,00         | 4620,00   |
-| Estimation pour terminer| 10,00         | 1100,00   |
-| **Total prévu**         | **52,00**     | **5720,00** |
-| Budget initial          | 50,00         | 5500,00   |
-| **Écart**               | +2,00         | +220,00   |
-
-📌 *Légère dérive (+4%) due à des ajustements non planifiés.*
+| État                      | Effort (h) | Coût ($) |
+|---------------------------|------------|----------|
+| Cumulatif Sprint 1        | 52         | 6240     |
+| Sprint 2                  | 38         | 4560     |
+| Total à date              | 90         | 10 800   |
+| Estimation pour terminer  | 30         | 3600     |
+| **Total prévu**           | 120        | 14 400   |
+| **Budget initial**        | 120        | 14 400   |
+| **Écart**                 | 0          | 0        |
 
 ---
 
-### 🐞 État de la qualité
-- Bugs critiques : 0
-- Bugs mineurs : 2 (retour non rafraîchi + doublon de paiement)
+### 🐞 Qualité
+- Aucun bug critique signalé
+- 3 améliorations mineures prévues au Sprint 3
 
 ---
 
-### ⚠️ État des risques et obstacles
-- ❌ Accès API restreint (corrigé)
-- ⚠️ Retard sur lecture code-barres (encore en attente)
+### ⚠️ Risques & Obstacles
+- Retard potentiel si Stripe reste instable (mitigation prévue avec fallback PayPal)
 
 ---
 
 ### 🔧 Plan d’amélioration
-- Ajouter tests unitaires au Sprint 3
-- Mieux répartir les tâches lourdes
-- Valider les endpoints backend plus tôt
+- Mieux tester le paiement sur sandbox
+- Anticiper les dépendances API à l’avance
