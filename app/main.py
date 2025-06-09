@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.utils import get_openapi
-from app.routes import auth,utilisateurs,livre  # import your auth router
+from app.routes import auth,utilisateurs,livre,reservation  # import your auth router
 from app.utils.security import bearer_scheme
 
 app = FastAPI(title="LibraNet API")
@@ -20,6 +20,8 @@ app.add_middleware(
 app.include_router(auth.router)
 app.include_router(utilisateurs.router)
 app.include_router(livre.router)
+app.include_router(reservation.router)
+
 
 # Override OpenAPI to set BearerAuth globally
 def custom_openapi():
@@ -49,3 +51,4 @@ app.openapi = custom_openapi
 @app.get("/")
 async def root():
     return {"message": "Welcome to LibraNet API! 🚀"}
+
