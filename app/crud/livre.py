@@ -8,7 +8,10 @@ def livre_entity(livre) -> dict:
         "titre": livre["titre"],
         "auteur": livre["auteur"],
         "description": livre.get("description"),
-        "image_url": livre.get("image_url")
+        "image_url": livre.get("image_url"),
+        "purchase_price": livre.get("purchase_price", 0.0),
+        "reservation_price": livre.get("reservation_price", 0.0),
+        "stock": livre.get("stock", 0)
     }
 
 async def create_livre(data: LivreCreate) -> dict:

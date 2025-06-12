@@ -23,7 +23,10 @@ async def create_livre(
     titre: str = Form(...),
     auteur: str = Form(...),
     description: str = Form(...),
-    image: UploadFile = File(...)
+    purchase_price: float = Form(...),
+    reservation_price: float = Form(...),
+    image: UploadFile = File(...),
+    stock:int= Form(...)
 ):
     filename = f"{uuid4().hex}{os.path.splitext(image.filename)[1]}"
     image_path = os.path.join(UPLOAD_DIR, filename)
@@ -35,7 +38,10 @@ async def create_livre(
         titre=titre,
         auteur=auteur,
         description=description,
-        image_url=f"/images/{filename}"
+        image_url=f"/images/{filename}",
+        purchase_price=purchase_price,
+        reservation_price=reservation_price,
+        stock=stock
     )
 
     return await crud_create_livre(livre_data)
@@ -57,9 +63,10 @@ async def edit_livre(
     titre: str = Form(...),
     auteur: str = Form(...),
     description: str = Form(...),
+    purchase_price: float = Form(...),
+    reservation_price: float = Form(...),
     image: Optional[UploadFile] = File(None)
 ):
-    # Save new image if provided
     image_url = None
     if image:
         filename = f"{uuid4().hex}{os.path.splitext(image.filename)[1]}"
@@ -68,12 +75,13 @@ async def edit_livre(
             f.write(await image.read())
         image_url = f"/images/{filename}"
 
-    # Build update data
     data = LivreUpdate(
         titre=titre,
         auteur=auteur,
         description=description,
-        image_url=image_url  # will be None if not changed
+        image_url=image_url,
+        purchase_price=purchase_price,
+        reservation_price=reservation_price
     )
 
     updated = await update_livre(livre_id, data)

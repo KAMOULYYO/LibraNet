@@ -7,7 +7,6 @@ class ReservationCreate(BaseModel):
     livre_id: str
     date_debut: date
     date_fin: date
-    montant: float
 
 class ReservationDB(ReservationCreate):
     id: str
